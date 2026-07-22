@@ -48,12 +48,13 @@
 
       const name = (form.elements.namedItem("name") || {}).value || "";
       const email = (form.elements.namedItem("email") || {}).value || "";
+      const country = (form.elements.namedItem("country") || {}).value || "";
       const role = (form.elements.namedItem("role") || {}).value || "";
       const message = (form.elements.namedItem("message") || {}).value || "";
 
       statusEl.classList.remove("success", "error");
 
-      if (!name.trim() || !email.trim() || !role || !message.trim()) {
+      if (!name.trim() || !email.trim() || !country.trim() || !role || !message.trim()) {
         statusEl.textContent = "Please complete all fields.";
         statusEl.classList.add("error");
         return;
@@ -67,17 +68,20 @@
       }
 
       const roleLabel = form.querySelector('select[name="role"] option:checked')?.textContent || role;
-      const subject = encodeURIComponent("LakazAgri Phase 1 pilot interest — " + name.trim());
+      const subject = encodeURIComponent(
+        "LakazAgri pilot — " + country.trim() + " — " + name.trim()
+      );
       const body = encodeURIComponent(
         [
           "Name: " + name.trim(),
           "Email: " + email.trim(),
+          "Country / market: " + country.trim(),
           "Role: " + roleLabel,
           "",
           "Message:",
           message.trim(),
           "",
-          "— Sent from lakazagri.mu Phase 1 site",
+          "— Sent from lakazagri.mu (Sub-Saharan Africa pilot form)",
         ].join("\n")
       );
 

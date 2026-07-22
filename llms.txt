@@ -1,5 +1,8 @@
 # LakazAgri
-> Free Android app for farm-to-buyer coordination in Mauritius.
+> Free offline-first Android app for farm-to-buyer coordination across Sub-Saharan Africa. Developed in Mauritius.
+
+## Positioning
+LakazAgri targets agri-food systems across Sub-Saharan Africa — smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
 
 ## Site
 - Homepage: https://lakazagri.mu/
@@ -7,7 +10,7 @@
 - Phone: +230 5479 6356
 
 ## Product
-LakazAgri Phase 1 helps Mauritian farmers post crop availability and lets hotels, supermarkets, restaurants and institutions post demand. Offline-first, built for local districts and villages.
+Phase 1 lets farmers post crop availability and buyers post demand so both sides can plan, reduce waste and strengthen local and regional supply chains. Offline-first for rural connectivity.
 
 ## Related
 - Sister product Mkweli AML: https://mkweli.tech/
