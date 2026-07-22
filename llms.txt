@@ -1,0 +1,14 @@
+# LakazAgri
+> Free Android app for farm-to-buyer coordination in Mauritius.
+
+## Site
+- Homepage: https://lakazagri.mu/
+- Contact: gilbert@mkweli.tech
+- Phone: +230 5479 6356
+
+## Product
+LakazAgri Phase 1 helps Mauritian farmers post crop availability and lets hotels, supermarkets, restaurants and institutions post demand. Offline-first, built for local districts and villages.
+
+## Related
+- Sister product Mkweli AML: https://mkweli.tech/
+- App releases: https://github.com/gilbertbouic/lakazAgri/releases

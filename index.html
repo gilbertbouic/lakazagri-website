@@ -3,19 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LakazAgri Phase 1 — the mobile app that connects Mauritian farmers with hotels, supermarkets, and institutions. Post availability, signal demand, reduce waste, plan ahead." />
+  <title>LakazAgri Mauritius — Farm-to-Buyer App for Farmers, Hotels &amp; Supermarkets</title>
+  <meta name="description" content="LakazAgri is a free Android app for Mauritius that connects farmers with hotels, supermarkets and institutions. Post crop availability, signal demand, reduce waste and strengthen local food supply chains." />
+  <meta name="keywords" content="LakazAgri, Mauritius agriculture, farm to buyer, Mauritian farmers app, smart agriculture Mauritius, hotel local produce, food supply chain Mauritius, agri marketplace, MCA Smart Agriculture, FAREI, offline farm app, Rodrigues agriculture" />
+  <meta name="author" content="LakazAgri" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
   <meta name="theme-color" content="#0B5C2E" />
-  <meta property="og:title" content="LakazAgri Phase 1 — Farm-to-Buyer Coordination for Mauritius" />
-  <meta property="og:description" content="A simple mobile app for farmers and buyers to plan supply, signal demand, and build reliable local food chains." />
+  <meta name="geo.region" content="MU" />
+  <meta name="geo.placename" content="Mauritius" />
+  <meta name="language" content="English" />
+  <link rel="canonical" href="https://lakazagri.mu/" />
+  <link rel="alternate" hreflang="en" href="https://lakazagri.mu/" />
+  <link rel="alternate" hreflang="x-default" href="https://lakazagri.mu/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="LakazAgri" />
+  <meta property="og:locale" content="en_MU" />
+  <meta property="og:title" content="LakazAgri — Farm-to-Buyer Coordination for Mauritius" />
+  <meta property="og:description" content="Free Android app for Mauritian farmers and buyers to plan supply, signal demand, cut waste and build reliable local food chains." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lakazagri.mu/" />
-  <meta property="og:image" content="assets/Logo.png" />
-  <title>LakazAgri | Phase 1 — Better Coordination Between Farmers &amp; Buyers</title>
+  <meta property="og:image" content="https://lakazagri.mu/assets/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://lakazagri.mu/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LakazAgri — farm-to-buyer coordination app for Mauritius" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LakazAgri — Farm-to-Buyer App for Mauritius" />
+  <meta name="twitter:description" content="Connect farmers with hotels, supermarkets and institutions. Post availability, signal demand, reduce waste." />
+  <meta name="twitter:image" content="https://lakazagri.mu/assets/og-image.jpg" />
+  <meta name="twitter:image:alt" content="LakazAgri app for Mauritius agriculture" />
+
   <link rel="icon" type="image/png" href="assets/logo-small.png" />
+  <link rel="apple-touch-icon" href="assets/Logo.png" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://lakazagri.mu/sitemap.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://lakazagri.mu/#website",
+        "url": "https://lakazagri.mu/",
+        "name": "LakazAgri",
+        "description": "Farm-to-buyer coordination app for Mauritius — connecting farmers with hotels, supermarkets and institutions.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://lakazagri.mu/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://lakazagri.mu/#organization",
+        "name": "LakazAgri",
+        "url": "https://lakazagri.mu/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lakazagri.mu/assets/Logo.png",
+          "width": 500,
+          "height": 500
+        },
+        "email": "gilbert@mkweli.tech",
+        "telephone": "+230-5479-6356",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Mauritius"
+        },
+        "sameAs": [
+          "https://mkweli.tech/",
+          "https://github.com/gilbertbouic/lakazAgri"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://lakazagri.mu/#app",
+        "name": "LakazAgri Phase 1",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Agriculture",
+        "operatingSystem": "Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "MUR"
+        },
+        "description": "Offline-first Android app for Mauritian farmers and buyers to post crop availability and demand, reduce waste and coordinate local food supply.",
+        "url": "https://lakazagri.mu/",
+        "downloadUrl": "https://github.com/gilbertbouic/lakazAgri/releases/download/phase-1.v1.0/lakazagri-phase-1-v1.0.apk",
+        "image": "https://lakazagri.mu/assets/og-image.jpg",
+        "author": { "@id": "https://lakazagri.mu/#organization" },
+        "countriesSupported": "MU",
+        "featureList": [
+          "Farmer availability posting",
+          "Buyer demand signals",
+          "Offline-first design",
+          "Mauritius districts and villages",
+          "Local phone formats"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://lakazagri.mu/#webpage",
+        "url": "https://lakazagri.mu/",
+        "name": "LakazAgri Mauritius — Farm-to-Buyer App",
+        "isPartOf": { "@id": "https://lakazagri.mu/#website" },
+        "about": { "@id": "https://lakazagri.mu/#app" },
+        "description": "Official website for LakazAgri Phase 1 — the free mobile app connecting Mauritian farmers with hotels, supermarkets and institutions.",
+        "inLanguage": "en",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://lakazagri.mu/assets/og-image.jpg"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Skip link -->
@@ -25,7 +133,7 @@
   <header class="site-header" id="top">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="LakazAgri home">
-        <img src="assets/Logo.png" alt="" width="44" height="44" class="brand-logo" />
+        <img src="assets/Logo.png" alt="LakazAgri logo" width="44" height="44" class="brand-logo" />
         <span class="brand-text">Lakaz<span>Agri</span></span>
       </a>
       <nav class="nav" id="primary-nav" aria-label="Primary">
@@ -485,7 +593,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a class="brand" href="#top">
-          <img src="assets/Logo.png" alt="" width="40" height="40" class="brand-logo" />
+          <img src="assets/Logo.png" alt="LakazAgri logo" width="40" height="40" class="brand-logo" />
           <span class="brand-text">Lakaz<span>Agri</span></span>
         </a>
         <p>Supporting farmers, buyers, and food security through practical digital coordination — built in Mauritius.</p>
