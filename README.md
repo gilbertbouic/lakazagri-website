@@ -1,10 +1,18 @@
 # LakazAgri — Marketing website
 
-Professional product site for the **LakazAgri** Android app: farm-to-buyer coordination **plus trust layer** (origin/batch ID, quality photos, payment proof) — pilot APK **v1.3-trust**.
+Professional product site for the **LakazAgri** Android app and cloud SaaS: farm-to-buyer coordination, multi-device sync, and trust layer (origin/batch ID, quality photos, payment proof).
 
 **Live (GitHub Pages):** https://lakazagri.mkweli.tech/
 
-**Custom domain (after DNS):** https://lakazagri.mkweli.tech/
+## Production SaaS (Hetzner)
+
+| Service | URL |
+|---------|-----|
+| Web app | https://app.mkweli.tech/ |
+| API | https://api.mkweli.tech/ |
+| Marketing (this repo) | https://lakazagri.mkweli.tech/ |
+
+DNS for `api` / `app` points at the Hetzner VPS; this marketing site remains on GitHub Pages under `lakazagri.mkweli.tech`.
 
 ## Contents
 
@@ -25,16 +33,14 @@ python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-## GitHub Pages (already set up on this repo)
+## GitHub Pages
 
 Site is published from the **`main`** branch, folder **`/` (root)**.
 
 After every push to `main`, Pages rebuilds automatically (usually within 1–2 minutes).
 
-### Update the site later
-
 ```bash
-git clone git@github.com:gilbertbouic/lakazagri-website.git
+git clone https://github.com/gilbertbouic/lakazagri-website.git
 cd lakazagri-website
 # edit files…
 git add -A
@@ -42,45 +48,12 @@ git commit -m "Update marketing copy"
 git push
 ```
 
-## Point lakazagri.mkweli.tech at this site (Dynadot)
-
-### Option A — GitHub Pages only (simplest)
-
-1. Open repo **Settings → Pages**.
-2. Under **Custom domain**, enter `lakazagri.mkweli.tech` and save (GitHub may also suggest `www`).
-3. In **Dynadot → Manage DNS** for `lakazagri.mkweli.tech` (while still using Dynadot nameservers), add:
-
-   | Type | Host | Value |
-   |------|------|--------|
-   | **A** | `@` (or blank) | `185.199.108.153` |
-   | **A** | `@` | `185.199.109.153` |
-   | **A** | `@` | `185.199.110.153` |
-   | **A** | `@` | `185.199.111.153` |
-   | **CNAME** | `www` | `gilbertbouic.github.io` |
-
-4. Wait for DNS (minutes to a few hours). In GitHub Pages, tick **Enforce HTTPS** once the certificate is ready.
-5. Optional: add a `CNAME` file in this repo containing only:
-
-   ```
-   lakazagri.mkweli.tech
-   ```
-
-   (GitHub usually creates this when you set the custom domain in the UI.)
-
-### Option B — Cloudflare DNS (recommended long-term)
-
-1. Add `lakazagri.mkweli.tech` to Cloudflare (free).
-2. Change **nameservers in Dynadot** to the two Cloudflare nameservers.
-3. In Cloudflare DNS, add the same A records + `www` CNAME as above (or use Cloudflare proxy carefully with GitHub Pages).
-4. Set custom domain on the GitHub Pages settings page.
-
-Keep **Dynadot only as the registrar** (renewal). Host the site on GitHub Pages; fix email separately (Cloudflare Email Routing or Zoho/Google).
-
 ## Contact used on the site
 
 - support@mkweli.tech  
 - +230 5479 6356  
-- Pilot APK (v1.3-trust): [download](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk)
+- Pilot APK (v1.3-trust): [download](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk)  
+- Web app: https://app.mkweli.tech/
 
 ## Licence
 

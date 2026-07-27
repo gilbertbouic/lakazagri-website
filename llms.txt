@@ -1,18 +1,28 @@
 # LakazAgri
-> Free offline-first Android app for farm-to-buyer coordination and match-level trust across Sub-Saharan Africa. Developed in Mauritius.
+> Free offline-first Android app and cloud SaaS for farm-to-buyer coordination and match-level trust across Sub-Saharan Africa. Developed in Mauritius.
 
 ## Positioning
 LakazAgri targets agri-food systems across Sub-Saharan Africa — smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
 
-## Site
-- Homepage: https://lakazagri.mkweli.tech/
+## Sites & infrastructure
+- Marketing: https://lakazagri.mkweli.tech/
+- Web app (SaaS UI): https://app.mkweli.tech/
+- Production API (HTTPS): https://api.mkweli.tech/ — health: https://api.mkweli.tech/api/health
+- Parent hub: https://mkweli.tech/
+- Source: https://github.com/gilbertbouic/lakazAgri
 - Contact: support@mkweli.tech
 - Phone: +230 5479 6356
 
-## Product (pilot v1.3-trust)
-Farmers post crop availability and buyers post demand; both sides browse matches. On a match they open a **trust / order record**: origin and batch ID, quality photos (offline), payment status and receipt proof. Offline-first for rural connectivity.
+## Product (live)
+- Multi-device cloud sync: APKs and web share data within the same country group
+- Farmers post crop availability; buyers post demand; verifiers browse read-only
+- Trust / order record: origin and batch ID, quality photos (offline), payment status and receipt proof
+- Languages: English, French, Portuguese
+- Offline-first Room cache on Android; server sync when online
+- Owner console for the app sponsor (IP-restricted)
+
+## Pilot APK
+https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk
 
 ## Related
-- Parent hub: https://mkweli.tech/
 - Feature matrix: https://lakazagri.mkweli.tech/docs/TRUST_LAYER_FEATURE_MATRIX.md
-- Pilot APK: https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk
