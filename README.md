@@ -1,6 +1,6 @@
-# LakazAgri Phase 1 — Marketing website
+# LakazAgri — Marketing website
 
-Professional single-page site for **Phase 1** of the LakazAgri Android app: farm-to-buyer coordination (register, post availability, post demand, browse demand).
+Professional product site for the **LakazAgri** Android app: farm-to-buyer coordination **plus trust layer** (origin/batch ID, quality photos, payment proof) — pilot APK **v1.3-trust**.
 
 **Live (GitHub Pages):** https://lakazagri.mkweli.tech/
 
@@ -13,7 +13,9 @@ Professional single-page site for **Phase 1** of the LakazAgri Android app: farm
 | `index.html` | Full marketing page |
 | `styles.css` | Brand design (greens + gold from logo) |
 | `script.js` | Sticky header, mobile nav, pilot form → mailto |
-| `assets/` | Logo + Phase 1 app screenshots |
+| `assets/` | Logo + app screenshots |
+| `downloads/` | Pilot APKs (v1.3-trust current) |
+| `docs/` | Trust layer feature matrix |
 | `.nojekyll` | Required so GitHub Pages serves files as-is |
 
 ## Local preview
@@ -78,7 +80,7 @@ Keep **Dynadot only as the registrar** (renewal). Host the site on GitHub Pages;
 
 - support@mkweli.tech  
 - +230 5479 6356  
-- Phase 1 APK: [GitHub release](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk)
+- Pilot APK (v1.3-trust): [download](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk)
 
 ## Licence
 

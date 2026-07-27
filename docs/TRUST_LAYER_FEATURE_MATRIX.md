@@ -5,7 +5,7 @@ Core principle: every feature attaches to a **matched order / batch**, stays **o
 
 ## Current baseline (live)
 
-Already shipping:
+Already shipping (foundation):
 
 - Farmer / buyer registration  
 - Post availability & post demand  
@@ -15,7 +15,7 @@ Already shipping:
 
 ---
 
-## Must-have — Trust Phase 1 (next build priority)
+## Must-have — Trust Phase 1 (**shipped** in pilot APK v1.3-trust)
 
 | Feature | What it does | Integration with current flow | Main commercial value | Offline / practical notes |
 |---------|----------------|------------------------------|------------------------|---------------------------|
@@ -84,3 +84,15 @@ Match (existing)
 - **Later:** Production method notes, full order trail, export-ready summaries.  
 
 Avoid over-promising blockchain or certification until those layers actually ship.
+
+
+---
+
+## How to open in the app (v1.3-trust)
+
+1. Open the **Matches** tab  
+2. Tap a match  
+3. Tap **Open trust / order record**  
+4. Save origin → add quality photos → set payment status / attach proof  
+
+Public download: https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk
