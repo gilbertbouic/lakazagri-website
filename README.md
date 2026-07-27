@@ -78,7 +78,7 @@ Keep **Dynadot only as the registrar** (renewal). Host the site on GitHub Pages;
 
 - gilbert@mkweli.tech  
 - +230 5479 6356  
-- Phase 1 APK: [GitHub release](https://github.com/gilbertbouic/lakazAgri/releases/download/phase-1.v1.0/lakazagri-phase-1-v1.0.apk)
+- Phase 1 APK: [GitHub release](https://github.com/gilbertbouic/lakazAgri/releases/download/phase-1.v1.2/lakazagri-phase-1-v1.2.apk)
 
 ## Licence
 
