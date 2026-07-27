@@ -2,7 +2,7 @@
 
 Professional single-page site for **Phase 1** of the LakazAgri Android app: farm-to-buyer coordination (register, post availability, post demand, browse demand).
 
-**Live (GitHub Pages):** https://gilbertbouic.github.io/lakazagri-website/
+**Live (GitHub Pages):** https://lakazagri.mkweli.tech/
 
 **Custom domain (after DNS):** https://lakazagri.mu/
 
@@ -78,7 +78,7 @@ Keep **Dynadot only as the registrar** (renewal). Host the site on GitHub Pages;
 
 - gilbert@mkweli.tech  
 - +230 5479 6356  
-- Phase 1 APK: [GitHub release](https://github.com/gilbertbouic/lakazAgri/releases/download/phase-1.v1.2/lakazagri-phase-1-v1.2.apk)
+- Phase 1 APK: [GitHub release](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.2.apk)
 
 ## Licence
 
