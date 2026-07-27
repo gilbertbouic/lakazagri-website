@@ -5,7 +5,7 @@
 LakazAgri targets agri-food systems across Sub-Saharan Africa — smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
 
 ## Site
-- Homepage: https://lakazagri.mu/
+- Homepage: https://lakazagri.mkweli.tech/
 - Contact: gilbert@mkweli.tech
 - Phone: +230 5479 6356
 

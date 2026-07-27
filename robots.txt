@@ -1,4 +1,4 @@
-# https://lakazagri.mu/robots.txt
+# https://lakazagri.mkweli.tech/robots.txt
 User-agent: *
 Allow: /
 
@@ -11,4 +11,4 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-Sitemap: https://lakazagri.mu/sitemap.xml
+Sitemap: https://lakazagri.mkweli.tech/sitemap.xml

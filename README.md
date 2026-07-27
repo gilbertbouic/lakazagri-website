@@ -4,7 +4,7 @@ Professional single-page site for **Phase 1** of the LakazAgri Android app: farm
 
 **Live (GitHub Pages):** https://lakazagri.mkweli.tech/
 
-**Custom domain (after DNS):** https://lakazagri.mu/
+**Custom domain (after DNS):** https://lakazagri.mkweli.tech/
 
 ## Contents
 
@@ -40,13 +40,13 @@ git commit -m "Update marketing copy"
 git push
 ```
 
-## Point lakazagri.mu at this site (Dynadot)
+## Point lakazagri.mkweli.tech at this site (Dynadot)
 
 ### Option A — GitHub Pages only (simplest)
 
 1. Open repo **Settings → Pages**.
-2. Under **Custom domain**, enter `lakazagri.mu` and save (GitHub may also suggest `www`).
-3. In **Dynadot → Manage DNS** for `lakazagri.mu` (while still using Dynadot nameservers), add:
+2. Under **Custom domain**, enter `lakazagri.mkweli.tech` and save (GitHub may also suggest `www`).
+3. In **Dynadot → Manage DNS** for `lakazagri.mkweli.tech` (while still using Dynadot nameservers), add:
 
    | Type | Host | Value |
    |------|------|--------|
@@ -60,14 +60,14 @@ git push
 5. Optional: add a `CNAME` file in this repo containing only:
 
    ```
-   lakazagri.mu
+   lakazagri.mkweli.tech
    ```
 
    (GitHub usually creates this when you set the custom domain in the UI.)
 
 ### Option B — Cloudflare DNS (recommended long-term)
 
-1. Add `lakazagri.mu` to Cloudflare (free).
+1. Add `lakazagri.mkweli.tech` to Cloudflare (free).
 2. Change **nameservers in Dynadot** to the two Cloudflare nameservers.
 3. In Cloudflare DNS, add the same A records + `www` CNAME as above (or use Cloudflare proxy carefully with GitHub Pages).
 4. Set custom domain on the GitHub Pages settings page.

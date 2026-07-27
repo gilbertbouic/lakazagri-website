@@ -81,7 +81,7 @@
           "Message:",
           message.trim(),
           "",
-          "— Sent from lakazagri.mu (Sub-Saharan Africa pilot form)",
+          "— Sent from lakazagri.mkweli.tech (Sub-Saharan Africa pilot form)",
         ].join("\n")
       );
 

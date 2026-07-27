@@ -3,19 +3,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lakazagri.mu/</loc>
+    <loc>https://lakazagri.mkweli.tech/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lakazagri.mu/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lakazagri.mu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lakazagri.mkweli.tech/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lakazagri.mkweli.tech/" />
     <image:image>
-      <image:loc>https://lakazagri.mu/assets/og-image.jpg</image:loc>
+      <image:loc>https://lakazagri.mkweli.tech/assets/og-image.jpg</image:loc>
       <image:title>LakazAgri — Farm-to-buyer coordination for Sub-Saharan Africa</image:title>
       <image:caption>Offline-first mobile app connecting African farmers with hotels, markets and institutions. Developed in Mauritius.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://lakazagri.mu/assets/Logo.png</image:loc>
+      <image:loc>https://lakazagri.mkweli.tech/assets/Logo.png</image:loc>
       <image:title>LakazAgri logo</image:title>
     </image:image>
   </url>
