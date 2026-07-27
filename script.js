@@ -88,11 +88,11 @@
       statusEl.textContent = "Opening your email app…";
       statusEl.classList.add("success");
 
-      window.location.href = "mailto:gilbert@mkweli.tech?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:support@mkweli.tech?subject=" + subject + "&body=" + body;
 
       window.setTimeout(function () {
         statusEl.textContent =
-          "If your email app did not open, write to gilbert@mkweli.tech directly.";
+          "If your email app did not open, write to support@mkweli.tech directly.";
       }, 1800);
     });
   }
