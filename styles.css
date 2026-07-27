@@ -992,3 +992,11 @@ button, input, select, textarea { font: inherit; }
     transition-duration: 0.01ms !important;
   }
 }
+
+.mkweli-parent-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+.mkweli-parent-logo { height: 22px; width: auto; opacity: 0.95; }
