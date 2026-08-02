@@ -97,51 +97,83 @@
     });
   }
 
-  /* Small shared download counter (seed + remote increments) */
-  (function initDownloadCounter() {
-    const host = document.querySelector("[data-dl-counter]");
-    if (!host) return;
-    const product = host.getAttribute("data-dl-product") || "app";
-    const seed = Math.max(0, parseInt(host.getAttribute("data-dl-seed") || "0", 10) || 0);
-    const apiBase = "https://api.counterapi.dev/v1/mkweli-tech/apk-" + product;
-    const format = function (n) {
-      return n.toLocaleString("en-US");
+  function initDownloadCounter() {
+    if (!document.getElementById("dl-counter-style")) {
+      var st = document.createElement("style");
+      st.id = "dl-counter-style";
+      st.textContent = ".dl-counter{margin:0.55rem 0 0;font-size:0.72rem;letter-spacing:0.03em;font-weight:500;color:rgba(255,255,255,0.62);}";
+      document.head.appendChild(st);
+    }
+
+    let downloadLink = document.querySelector("[data-dl-link]");
+    if (!downloadLink) {
+      downloadLink = document.querySelector('#download a[href*=".apk"], #download a.btn-accent');
+      if (downloadLink) downloadLink.setAttribute("data-dl-link", "");
+    }
+    let counterEl = document.querySelector("[data-dl-counter]");
+    if (!counterEl && downloadLink) {
+      counterEl = document.createElement("p");
+      counterEl.className = "dl-counter";
+      counterEl.setAttribute("data-dl-counter", "");
+      counterEl.setAttribute("data-dl-product", "lakazagri");
+      counterEl.setAttribute("data-dl-seed", "875");
+      counterEl.setAttribute("aria-live", "polite");
+      const box = downloadLink.closest(".download-actions, .download-copy") || downloadLink.parentElement;
+      box.appendChild(counterEl);
+    }
+    if (!counterEl || !downloadLink) return;
+
+    const product = counterEl.getAttribute("data-dl-product") || "lakazagri";
+    const seed = Number(counterEl.getAttribute("data-dl-seed")) || 875;
+    const apiBaseByProduct = {
+      lakazagri: "https://api.counterapi.dev/v1/mkweli-tech/apk-lakazagri",
     };
-    let last = seed;
-    const render = function (n) {
-      last = n;
-      host.textContent = format(n) + " downloads";
-    };
-    render(seed);
-    fetch(apiBase + "/")
-      .then(function (r) {
-        return r.ok ? r.json() : null;
-      })
-      .then(function (data) {
-        if (data && typeof data.count === "number") render(seed + data.count);
-      })
+    const apiBase = apiBaseByProduct[product] || apiBaseByProduct.lakazagri;
+    let lastUpdateAt = 0;
+
+    function formatDownloads(total) {
+      return total.toLocaleString("en-US") + " downloads";
+    }
+
+    function getCountValue(payload) {
+      if (payload && typeof payload.count === "number") return payload.count;
+      if (payload && payload.data && typeof payload.data.count === "number") return payload.data.count;
+      return null;
+    }
+
+    function renderCount(rawCount) {
+      if (typeof rawCount !== "number") return;
+      counterEl.textContent = formatDownloads(seed + rawCount);
+    }
+
+    function requestCount(path, options) {
+      return fetch(apiBase + path, options)
+        .then(function (res) {
+          if (!res.ok) throw new Error("Counter request failed");
+          return res.json();
+        })
+        .then(getCountValue);
+    }
+
+    renderCount(0);
+
+    requestCount("/")
+      .then(renderCount)
       .catch(function () {});
-    let lock = false;
-    const track = function () {
-      if (lock) return;
-      lock = true;
-      window.setTimeout(function () {
-        lock = false;
-      }, 2000);
-      fetch(apiBase + "/up")
-        .then(function (r) {
-          return r.ok ? r.json() : null;
-        })
-        .then(function (data) {
-          if (data && typeof data.count === "number") render(seed + data.count);
-          else render(last + 1);
-        })
+
+    downloadLink.addEventListener("click", function () {
+      const now = Date.now();
+      if (now - lastUpdateAt < 2000) return;
+      lastUpdateAt = now;
+
+      requestCount("/up", { method: "POST" })
         .catch(function () {
-          render(last + 1);
-        });
-    };
-    document.querySelectorAll("[data-dl-link]").forEach(function (a) {
-      a.addEventListener("click", track);
+          return requestCount("/up");
+        })
+        .then(renderCount)
+        .catch(function () {});
     });
-  })();
+  }
+
+  initDownloadCounter();
 })();
