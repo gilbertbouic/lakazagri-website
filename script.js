@@ -96,4 +96,52 @@
       }, 1800);
     });
   }
+
+  /* Small shared download counter (seed + remote increments) */
+  (function initDownloadCounter() {
+    const host = document.querySelector("[data-dl-counter]");
+    if (!host) return;
+    const product = host.getAttribute("data-dl-product") || "app";
+    const seed = Math.max(0, parseInt(host.getAttribute("data-dl-seed") || "0", 10) || 0);
+    const apiBase = "https://api.counterapi.dev/v1/mkweli-tech/apk-" + product;
+    const format = function (n) {
+      return n.toLocaleString("en-US");
+    };
+    let last = seed;
+    const render = function (n) {
+      last = n;
+      host.textContent = format(n) + " downloads";
+    };
+    render(seed);
+    fetch(apiBase + "/")
+      .then(function (r) {
+        return r.ok ? r.json() : null;
+      })
+      .then(function (data) {
+        if (data && typeof data.count === "number") render(seed + data.count);
+      })
+      .catch(function () {});
+    let lock = false;
+    const track = function () {
+      if (lock) return;
+      lock = true;
+      window.setTimeout(function () {
+        lock = false;
+      }, 2000);
+      fetch(apiBase + "/up")
+        .then(function (r) {
+          return r.ok ? r.json() : null;
+        })
+        .then(function (data) {
+          if (data && typeof data.count === "number") render(seed + data.count);
+          else render(last + 1);
+        })
+        .catch(function () {
+          render(last + 1);
+        });
+    };
+    document.querySelectorAll("[data-dl-link]").forEach(function (a) {
+      a.addEventListener("click", track);
+    });
+  })();
 })();
