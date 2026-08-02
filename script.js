@@ -105,10 +105,27 @@
       document.head.appendChild(st);
     }
 
-    let downloadLink = document.querySelector("[data-dl-link]");
+    function isApkHref(h) {
+      return /\.apk($|[?#])/i.test(h || "");
+    }
+    // Only APK file links count (not release pages / source)
+    let downloadLink = null;
+    document.querySelectorAll("a[href]").forEach(function (a) {
+      const href = a.getAttribute("href") || "";
+      if (isApkHref(href)) {
+        a.setAttribute("data-dl-link", "");
+        if (!downloadLink) downloadLink = a;
+      } else {
+        a.removeAttribute("data-dl-link");
+      }
+    });
     if (!downloadLink) {
-      downloadLink = document.querySelector('#download a[href*=".apk"], #download a.btn-accent');
-      if (downloadLink) downloadLink.setAttribute("data-dl-link", "");
+      downloadLink = document.querySelector('#download a[href*=".apk"]');
+      if (downloadLink && isApkHref(downloadLink.getAttribute("href") || "")) {
+        downloadLink.setAttribute("data-dl-link", "");
+      } else {
+        downloadLink = null;
+      }
     }
     let counterEl = document.querySelector("[data-dl-counter]");
     if (!counterEl && downloadLink) {
@@ -161,7 +178,7 @@
       .then(renderCount)
       .catch(function () {});
 
-    downloadLink.addEventListener("click", function () {
+    function onApkClick() {
       const now = Date.now();
       if (now - lastUpdateAt < 2000) return;
       lastUpdateAt = now;
@@ -172,6 +189,11 @@
         })
         .then(renderCount)
         .catch(function () {});
+    }
+    document.querySelectorAll("a[data-dl-link]").forEach(function (a) {
+      if (isApkHref(a.getAttribute("href") || "")) {
+        a.addEventListener("click", onApkClick);
+      }
     });
   }
 
