@@ -766,6 +766,13 @@ button, input, select, textarea { font: inherit; }
 .download-copy h2 { color: #fff; }
 .download-copy p { color: rgba(255, 255, 255, 0.8); max-width: 36rem; }
 .download-actions { margin-top: 1.25rem; }
+.dl-counter {
+  margin: 0.55rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.62);
+}
 .fine-print {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.55);

@@ -96,4 +96,63 @@
       }, 1800);
     });
   }
+
+  function initDownloadCounter() {
+    const counterEl = document.querySelector("[data-dl-counter]");
+    const downloadLink = document.querySelector("[data-dl-link]");
+    if (!counterEl || !downloadLink) return;
+
+    const product = counterEl.getAttribute("data-dl-product") || "lakazagri";
+    const seed = Number(counterEl.getAttribute("data-dl-seed")) || 875;
+    const apiBaseByProduct = {
+      lakazagri: "https://api.counterapi.dev/v1/mkweli-tech/apk-lakazagri",
+    };
+    const apiBase = apiBaseByProduct[product] || apiBaseByProduct.lakazagri;
+    let lastUpdateAt = 0;
+
+    function formatDownloads(total) {
+      return total.toLocaleString("en-US") + " downloads";
+    }
+
+    function getCountValue(payload) {
+      if (payload && typeof payload.count === "number") return payload.count;
+      if (payload && payload.data && typeof payload.data.count === "number") return payload.data.count;
+      return null;
+    }
+
+    function renderCount(rawCount) {
+      if (typeof rawCount !== "number") return;
+      counterEl.textContent = formatDownloads(seed + rawCount);
+    }
+
+    function requestCount(path, options) {
+      return fetch(apiBase + path, options)
+        .then(function (res) {
+          if (!res.ok) throw new Error("Counter request failed");
+          return res.json();
+        })
+        .then(getCountValue);
+    }
+
+    renderCount(0);
+
+    requestCount("/")
+      .then(renderCount)
+      .catch(function () {});
+
+    downloadLink.addEventListener("click", function () {
+      const now = Date.now();
+      if (now - lastUpdateAt < 2000) return;
+      lastUpdateAt = now;
+
+      requestCount("/up", { method: "POST" })
+        .catch(function () {
+          return requestCount("/up");
+        })
+        .then(renderCount)
+        .catch(function () {});
+    });
+  }
+
+  initDownloadCounter();
 })();
