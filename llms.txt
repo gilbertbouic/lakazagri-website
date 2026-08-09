@@ -22,7 +22,7 @@ LakazAgri targets agri-food systems across Sub-Saharan Africa — smallholder fa
 - Owner console for the app sponsor (IP-restricted)
 
 ## Pilot APK
-https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk
+https://lakazagri.mkweli.tech/downloads/lakazagri-1.4.0.apk
 
 ## Related
 - Feature matrix: https://lakazagri.mkweli.tech/docs/TRUST_LAYER_FEATURE_MATRIX.md
