@@ -1,5 +1,5 @@
 /* =========================================================
-   LakazAgri Phase 1 — Marketing site
+   LakazAgri Phase 1 - Marketing site
    Brand: deep greens + leaf green + gold accent (logo)
    ========================================================= */
 
@@ -190,6 +190,24 @@ button, input, select, textarea { font: inherit; }
 }
 .nav a:hover { color: var(--green-800); }
 .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.lang-switch a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.28rem 0.4rem;
+  border-radius: 8px;
+}
+.lang-switch a:hover,
+.lang-switch a[aria-current="true"] { color: var(--ink); }
+.lang-switch a[aria-current="true"] { background: var(--green-50); }
 .nav-toggle {
   display: none;
   width: 42px;

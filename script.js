@@ -1,5 +1,5 @@
 /**
- * LakazAgri Phase 1 — marketing site interactions
+ * LakazAgri Phase 1 - marketing site interactions
  */
 (function () {
   "use strict";
@@ -10,9 +10,64 @@
   const form = document.getElementById("pilot-form");
   const statusEl = document.getElementById("form-status");
   const yearEl = document.getElementById("year");
+  const isFr = (document.documentElement.lang || "").toLowerCase().startsWith("fr");
+  const i18n = isFr
+    ? {
+        openMenu: "Ouvrir le menu",
+        closeMenu: "Fermer le menu",
+        formIncomplete: "Veuillez remplir tous les champs.",
+        formInvalidEmail: "Veuillez saisir une adresse e-mail valide.",
+        formOpening: "Ouverture de votre application de messagerie...",
+        formFallback:
+          "Si votre application de messagerie ne s'est pas ouverte, écrivez directement à support@mkweli.tech.",
+        mailName: "Nom : ",
+        mailEmail: "E-mail : ",
+        mailCountry: "Pays / marché : ",
+        mailRole: "Rôle : ",
+        mailMessage: "Message :",
+        mailSentFrom:
+          "- Envoyé depuis lakazagri.mkweli.tech (formulaire pilote Afrique subsaharienne)",
+        mailSubject: "Pilote LakazAgri - ",
+        downloads: " téléchargements",
+        locale: "fr-FR",
+      }
+    : {
+        openMenu: "Open menu",
+        closeMenu: "Close menu",
+        formIncomplete: "Please complete all fields.",
+        formInvalidEmail: "Please enter a valid email address.",
+        formOpening: "Opening your email app...",
+        formFallback:
+          "If your email app did not open, write to support@mkweli.tech directly.",
+        mailName: "Name: ",
+        mailEmail: "Email: ",
+        mailCountry: "Country / market: ",
+        mailRole: "Role: ",
+        mailMessage: "Message:",
+        mailSentFrom:
+          "- Sent from lakazagri.mkweli.tech (Sub-Saharan Africa pilot form)",
+        mailSubject: "LakazAgri pilot - ",
+        downloads: " downloads",
+        locale: "en-US",
+      };
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
+  }
+
+  /* Keep the current section when switching EN <-> FR. */
+  const PAGE_TWINS = {
+    "/": { en: "/", fr: "/fr.html" },
+    "/index.html": { en: "/", fr: "/fr.html" },
+    "/fr.html": { en: "/", fr: "/fr.html" },
+  };
+  const path = location.pathname.replace(/\/+$/, "") || "/";
+  const twins = PAGE_TWINS[path] || PAGE_TWINS[path + ".html"];
+  if (twins) {
+    document.querySelectorAll(".lang-switch a[hreflang]").forEach(function (a) {
+      const dest = twins[a.getAttribute("hreflang")];
+      if (dest) a.setAttribute("href", dest + location.hash);
+    });
   }
 
   /* Sticky header shadow */
@@ -29,14 +84,14 @@
       const open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
       nav.classList.toggle("open", !open);
-      toggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+      toggle.setAttribute("aria-label", open ? i18n.openMenu : i18n.closeMenu);
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         toggle.setAttribute("aria-expanded", "false");
         nav.classList.remove("open");
-        toggle.setAttribute("aria-label", "Open menu");
+        toggle.setAttribute("aria-label", i18n.openMenu);
       });
     });
   }
@@ -55,44 +110,43 @@
       statusEl.classList.remove("success", "error");
 
       if (!name.trim() || !email.trim() || !country.trim() || !role || !message.trim()) {
-        statusEl.textContent = "Please complete all fields.";
+        statusEl.textContent = i18n.formIncomplete;
         statusEl.classList.add("error");
         return;
       }
 
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
       if (!emailOk) {
-        statusEl.textContent = "Please enter a valid email address.";
+        statusEl.textContent = i18n.formInvalidEmail;
         statusEl.classList.add("error");
         return;
       }
 
       const roleLabel = form.querySelector('select[name="role"] option:checked')?.textContent || role;
       const subject = encodeURIComponent(
-        "LakazAgri pilot — " + country.trim() + " — " + name.trim()
+        i18n.mailSubject + country.trim() + " - " + name.trim()
       );
       const body = encodeURIComponent(
         [
-          "Name: " + name.trim(),
-          "Email: " + email.trim(),
-          "Country / market: " + country.trim(),
-          "Role: " + roleLabel,
+          i18n.mailName + name.trim(),
+          i18n.mailEmail + email.trim(),
+          i18n.mailCountry + country.trim(),
+          i18n.mailRole + roleLabel,
           "",
-          "Message:",
+          i18n.mailMessage,
           message.trim(),
           "",
-          "— Sent from lakazagri.mkweli.tech (Sub-Saharan Africa pilot form)",
+          i18n.mailSentFrom,
         ].join("\n")
       );
 
-      statusEl.textContent = "Opening your email app…";
+      statusEl.textContent = i18n.formOpening;
       statusEl.classList.add("success");
 
       window.location.href = "mailto:support@mkweli.tech?subject=" + subject + "&body=" + body;
 
       window.setTimeout(function () {
-        statusEl.textContent =
-          "If your email app did not open, write to support@mkweli.tech directly.";
+        statusEl.textContent = i18n.formFallback;
       }, 1800);
     });
   }
@@ -149,7 +203,7 @@
     let lastUpdateAt = 0;
 
     function formatDownloads(total) {
-      return total.toLocaleString("en-US") + " downloads";
+      return total.toLocaleString(i18n.locale) + i18n.downloads;
     }
 
     function getCountValue(payload) {

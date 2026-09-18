@@ -2,12 +2,12 @@
 > Free offline-first Android app and cloud SaaS for farm-to-buyer coordination and match-level trust across Sub-Saharan Africa. Developed in Mauritius.
 
 ## Positioning
-LakazAgri targets agri-food systems across Sub-Saharan Africa — smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
+LakazAgri targets agri-food systems across Sub-Saharan Africa - smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
 
 ## Sites & infrastructure
 - Marketing: https://lakazagri.mkweli.tech/
 - Web app (SaaS UI): https://app.mkweli.tech/
-- Production API (HTTPS): https://api.mkweli.tech/ — health: https://api.mkweli.tech/api/health
+- Production API (HTTPS): https://api.mkweli.tech/ - health: https://api.mkweli.tech/api/health
 - Parent hub: https://mkweli.tech/
 - Source: https://github.com/gilbertbouic/lakazAgri
 - Contact: support@mkweli.tech

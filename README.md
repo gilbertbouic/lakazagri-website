@@ -1,4 +1,4 @@
-# LakazAgri — Marketing website
+# LakazAgri - Marketing website
 
 Professional product site for the **LakazAgri** Android app and cloud SaaS: farm-to-buyer coordination, multi-device sync, and trust layer (origin/batch ID, quality photos, payment proof).
 
@@ -37,7 +37,7 @@ python3 -m http.server 8080
 
 Site is published from the **`main`** branch, folder **`/` (root)**.
 
-After every push to `main`, Pages rebuilds automatically (usually within 1–2 minutes).
+After every push to `main`, Pages rebuilds automatically (usually within 1-2 minutes).
 
 ```bash
 git clone https://github.com/gilbertbouic/lakazagri-website.git
