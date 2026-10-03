@@ -1,18 +1,14 @@
 # LakazAgri - Marketing website
 
-Professional product site for the **LakazAgri** Android app and cloud SaaS: farm-to-buyer coordination, multi-device sync, and trust layer (origin/batch ID, quality photos, payment proof).
+Professional product site for the **LakazAgri** Android app: farm-to-buyer coordination, with accountability by Hyperledger Fabric verification of the batch (origin, quality photos, payment proof).
 
 **Live (GitHub Pages):** https://lakazagri.mkweli.tech/
 
-## Production SaaS (Hetzner)
+## Status
 
-| Service | URL |
-|---------|-----|
-| Web app | https://app.mkweli.tech/ |
-| API | https://api.mkweli.tech/ |
-| Marketing (this repo) | https://lakazagri.mkweli.tech/ |
+The marketing site stays on GitHub Pages at https://lakazagri.mkweli.tech/.
 
-DNS for `api` / `app` points at the Hetzner VPS; this marketing site remains on GitHub Pages under `lakazagri.mkweli.tech`.
+The shared cloud is paused. The page asks visitors to request a demo at gilbert@mkwel.tech. It does not link to the web app, the API, or a pilot APK.
 
 ## Contents
 
@@ -22,7 +18,7 @@ DNS for `api` / `app` points at the Hetzner VPS; this marketing site remains on 
 | `styles.css` | Brand design (greens + gold from logo) |
 | `script.js` | Sticky header, mobile nav, pilot form → mailto |
 | `assets/` | Logo + app screenshots |
-| `downloads/` | Pilot APKs (v1.3-trust current) |
+| `downloads/` | Pilot APK files kept in the repo, not linked from the page |
 | `docs/` | Trust layer feature matrix |
 | `.nojekyll` | Required so GitHub Pages serves files as-is |
 
@@ -50,10 +46,9 @@ git push
 
 ## Contact used on the site
 
-- support@mkweli.tech  
+- gilbert@mkwel.tech  
 - +230 5479 6356  
-- Pilot APK (v1.3-trust): [download](https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk)  
-- Web app: https://app.mkweli.tech/
+- Demo by appointment (the public APK and web app links are paused)
 
 ## Licence
 

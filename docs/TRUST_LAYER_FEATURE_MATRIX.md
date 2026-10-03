@@ -1,9 +1,9 @@
 # LakazAgri - Trust layer feature matrix
 
 Additions that sit **on top of demand-availability matching**.  
-Core principle: every feature attaches to a **matched order / batch**, stays **offline-first**, and earns commercial trust without requiring blockchain in the first releases.
+Core principle: every feature attaches to a **matched order / batch** and stays **offline-first**. Accountability is a **Hyperledger Fabric** verification of that batch.
 
-## Current baseline (live)
+## Current baseline (built)
 
 Already shipping (foundation):
 
@@ -28,7 +28,7 @@ Already shipping (foundation):
 1. Only unlocked **after a match is accepted** (not free-floating forms).  
 2. One **batch ID** per fulfilled slice of a match.  
 3. Same screen family as “order detail” - no separate complex module.  
-4. No blockchain required; local event log + sync is enough.  
+4. The accountability check is Hyperledger Fabric verification of the batch. Phones still record the order offline. Do not describe this as laboratory certification, and do not say a public network is open for self-serve use while the cloud is paused.  
 
 ---
 
@@ -79,11 +79,11 @@ Match (existing)
 
 ## Marketing messaging (for site / pilots)
 
-- **Now:** Coordinate supply and demand.  
-- **Next:** “Trust on every matched order” - origin, quality photos, payment proof.  
+- **Purpose:** Accountability. A matched batch is verified on Hyperledger Fabric.  
+- **Now:** Coordinate supply and demand, with origin, quality photos, and payment proof on that batch.  
 - **Later:** Production method notes, full order trail, export-ready summaries.  
 
-Avoid over-promising blockchain or certification until those layers actually ship.
+Do not describe Hyperledger verification as laboratory residue testing. The shared cloud is paused; demos are by appointment.
 
 
 ---
@@ -95,4 +95,4 @@ Avoid over-promising blockchain or certification until those layers actually shi
 3. Tap **Open trust / order record**  
 4. Save origin → add quality photos → set payment status / attach proof  
 
-Public download: https://lakazagri.mkweli.tech/downloads/lakazagri-phase-1-v1.3-trust.apk
+Public download is paused. Request a demo: gilbert@mkwel.tech

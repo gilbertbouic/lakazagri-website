@@ -19,7 +19,7 @@
         formInvalidEmail: "Veuillez saisir une adresse e-mail valide.",
         formOpening: "Ouverture de votre application de messagerie...",
         formFallback:
-          "Si votre application de messagerie ne s'est pas ouverte, écrivez directement à support@mkweli.tech.",
+          "Si votre application de messagerie ne s'est pas ouverte, écrivez directement à gilbert@mkwel.tech.",
         mailName: "Nom : ",
         mailEmail: "E-mail : ",
         mailCountry: "Pays / marché : ",
@@ -38,7 +38,7 @@
         formInvalidEmail: "Please enter a valid email address.",
         formOpening: "Opening your email app...",
         formFallback:
-          "If your email app did not open, write to support@mkweli.tech directly.",
+          "If your email app did not open, write to gilbert@mkwel.tech directly.",
         mailName: "Name: ",
         mailEmail: "Email: ",
         mailCountry: "Country / market: ",
@@ -143,7 +143,7 @@
       statusEl.textContent = i18n.formOpening;
       statusEl.classList.add("success");
 
-      window.location.href = "mailto:support@mkweli.tech?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:gilbert@mkwel.tech?subject=" + subject + "&body=" + body;
 
       window.setTimeout(function () {
         statusEl.textContent = i18n.formFallback;

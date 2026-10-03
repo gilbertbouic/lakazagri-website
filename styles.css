@@ -287,6 +287,10 @@ button, input, select, textarea { font: inherit; }
   box-shadow: 0 0 0 3px rgba(47, 158, 75, 0.25);
   animation: pulse 2s ease infinite;
 }
+.badge-hold {
+  background: var(--green-100);
+  color: var(--green-800);
+}
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 3px rgba(47, 158, 75, 0.25); }
   50% { box-shadow: 0 0 0 6px rgba(47, 158, 75, 0.08); }
@@ -461,7 +465,7 @@ button, input, select, textarea { font: inherit; }
 .problem { background: #fff; }
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 }
 .problem-card {
@@ -658,6 +662,9 @@ button, input, select, textarea { font: inherit; }
   gap: 3rem;
   align-items: center;
 }
+.outcomes-copy p + p {
+  margin-top: 0.9rem;
+}
 .outcome-stats {
   list-style: none;
   display: grid;
@@ -819,7 +826,7 @@ button, input, select, textarea { font: inherit; }
 .pilot { background: var(--surface-2); }
 .pilot-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: start;
 }
@@ -850,6 +857,7 @@ button, input, select, textarea { font: inherit; }
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-width: 0;
 }
 .form-row { display: flex; flex-direction: column; gap: 0.35rem; }
 .form-row label {
@@ -860,6 +868,8 @@ button, input, select, textarea { font: inherit; }
 .form-row input,
 .form-row select,
 .form-row textarea {
+  width: 100%;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.9rem;
@@ -949,10 +959,11 @@ button, input, select, textarea { font: inherit; }
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-visual { min-height: 460px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .problem-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery { grid-template-columns: repeat(3, 1fr); }
   .outcomes-grid,
   .download-card,
-  .pilot-grid { grid-template-columns: 1fr; }
+  .pilot-grid { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .feature-panel { grid-template-columns: 1fr; }
   .panel-shot { width: 160px; justify-self: start; }

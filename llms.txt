@@ -1,28 +1,25 @@
 # LakazAgri
-> Free offline-first Android app and cloud SaaS for farm-to-buyer coordination and match-level trust across Sub-Saharan Africa. Developed in Mauritius.
+> Offline-first Android app for farm-to-buyer coordination. Accountability is a Hyperledger Fabric verification of the batch. Developed in Mauritius. Countries supported: all.
 
 ## Positioning
 LakazAgri targets agri-food systems across Sub-Saharan Africa - smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
 
 ## Sites & infrastructure
 - Marketing: https://lakazagri.mkweli.tech/
-- Web app (SaaS UI): https://app.mkweli.tech/
-- Production API (HTTPS): https://api.mkweli.tech/ - health: https://api.mkweli.tech/api/health
 - Parent hub: https://mkweli.tech/
 - Source: https://github.com/gilbertbouic/lakazAgri
-- Contact: support@mkweli.tech
+- Contact: gilbert@mkwel.tech
 - Phone: +230 5479 6356
+- The shared cloud and the public APK are paused. Demos are by appointment via gilbert@mkwel.tech.
 
-## Product (live)
-- Multi-device cloud sync: APKs and web share data within the same country group
+## Product (built, demo on request)
 - Farmers post crop availability; buyers post demand; verifiers browse read-only
 - Trust / order record: origin and batch ID, quality photos (offline), payment status and receipt proof
+- Accountability check: Hyperledger Fabric verification of that batch. The public network is not left open for self-serve installs.
+- Country groups keep posts together
 - Languages: English, French, Portuguese
-- Offline-first Room cache on Android; server sync when online
-- Owner console for the app sponsor (IP-restricted)
-
-## Pilot APK
-https://lakazagri.mkweli.tech/downloads/lakazagri-1.5.2.apk
+- Offline-first cache on Android
+- The shared cloud is switched on for a scheduled demo, not left running for self-serve installs
 
 ## Related
 - Feature matrix: https://lakazagri.mkweli.tech/docs/TRUST_LAYER_FEATURE_MATRIX.md
