@@ -95,4 +95,4 @@ Do not describe Hyperledger verification as laboratory residue testing. The shar
 3. Tap **Open trust / order record**  
 4. Save origin → add quality photos → set payment status / attach proof  
 
-Public download is paused. Request a demo: gilbert@mkwel.tech
+Public download is paused. Request a demo: gilbert@mkweli.tech

@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lakazagri.mkweli.tech/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lakazagri.mkweli.tech/" />
@@ -13,7 +13,7 @@
     <image:image>
       <image:loc>https://lakazagri.mkweli.tech/assets/og-image.jpg</image:loc>
       <image:title>LakazAgri - Farm-to-buyer coordination for Sub-Saharan Africa</image:title>
-      <image:caption>Offline-first mobile app connecting African farmers with hotels, markets and institutions. Developed in Mauritius.</image:caption>
+      <image:caption>Offline-first mobile app connecting African farmers with hotels, markets and institutions. Southern Africa first.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://lakazagri.mkweli.tech/assets/Logo.png</image:loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://lakazagri.mkweli.tech/fr.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lakazagri.mkweli.tech/" />
@@ -31,7 +31,7 @@
     <image:image>
       <image:loc>https://lakazagri.mkweli.tech/assets/og-image.jpg</image:loc>
       <image:title>LakazAgri - Coordination ferme-acheteur pour l'Afrique subsaharienne</image:title>
-      <image:caption>Appli mobile hors-ligne d'abord qui relie les agriculteurs africains aux hôtels, marchés et institutions. Développé à Maurice.</image:caption>
+      <image:caption>Appli mobile hors-ligne d'abord qui relie les agriculteurs africains aux hôtels, marchés et institutions. Afrique australe d'abord.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://lakazagri.mkweli.tech/assets/Logo.png</image:loc>

@@ -1,23 +1,24 @@
 # LakazAgri
-> Offline-first Android app for farm-to-buyer coordination. Accountability is a Hyperledger Fabric verification of the batch. Developed in Mauritius. Countries supported: all.
+> Offline-first Android app for farm-to-buyer coordination. Accountability is a Hyperledger Fabric verification of the batch. Launch countries: South Africa, Zambia, Tanzania, Mozambique (Southern Africa / SADC first); other Sub-Saharan countries can register.
 
 ## Positioning
-LakazAgri targets agri-food systems across Sub-Saharan Africa - smallholder farmers, cooperatives, hotels, markets, traders and institutions. Mauritius is the development and pilot base, not the sole market.
+LakazAgri targets agri-food systems across Sub-Saharan Africa - smallholder farmers, cooperatives, hotels, markets, traders and institutions. Southern Africa (SADC) is the first focus: South Africa, Zambia, Tanzania and Mozambique.
 
 ## Sites & infrastructure
 - Marketing: https://lakazagri.mkweli.tech/
 - Parent hub: https://mkweli.tech/
 - Source: https://github.com/gilbertbouic/lakazAgri
-- Contact: gilbert@mkwel.tech
+- Contact: gilbert@mkweli.tech
 - Phone: +230 5479 6356
-- The shared cloud and the public APK are paused. Demos are by appointment via gilbert@mkwel.tech.
+- The shared cloud and the public APK are paused. Demos are by appointment via gilbert@mkweli.tech.
 
 ## Product (built, demo on request)
 - Farmers post crop availability; buyers post demand; verifiers browse read-only
 - Trust / order record: origin and batch ID, quality photos (offline), payment status and receipt proof
 - Accountability check: Hyperledger Fabric verification of that batch. The public network is not left open for self-serve installs.
 - Country groups keep posts together
-- Languages: English, French, Portuguese
+- Languages: English, French, Portuguese (Swahili in progress)
+- Payments are not processed in the app; users can record a mobile-money receipt (M-Pesa, Airtel Money, MTN MoMo, EcoCash) or bank slip as proof
 - Offline-first cache on Android
 - The shared cloud is switched on for a scheduled demo, not left running for self-serve installs
 
