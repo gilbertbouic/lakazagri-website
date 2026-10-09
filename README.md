@@ -8,7 +8,7 @@ Professional product site for the **LakazAgri** Android app: farm-to-buyer coord
 
 The marketing site stays on GitHub Pages at https://lakazagri.mkweli.tech/.
 
-The shared cloud is paused. The page asks visitors to request a demo at gilbert@mkwel.tech. It does not link to the web app, the API, or a pilot APK.
+The shared cloud is paused. The page asks visitors to request a demo at gilbert@mkweli.tech. It does not link to the web app, the API, or a pilot APK.
 
 ## Contents
 
@@ -18,7 +18,6 @@ The shared cloud is paused. The page asks visitors to request a demo at gilbert@
 | `styles.css` | Brand design (greens + gold from logo) |
 | `script.js` | Sticky header, mobile nav, pilot form → mailto |
 | `assets/` | Logo + app screenshots |
-| `downloads/` | Pilot APK files kept in the repo, not linked from the page |
 | `docs/` | Trust layer feature matrix |
 | `.nojekyll` | Required so GitHub Pages serves files as-is |
 
@@ -46,7 +45,7 @@ git push
 
 ## Contact used on the site
 
-- gilbert@mkwel.tech  
+- gilbert@mkweli.tech  
 - +230 5479 6356  
 - Demo by appointment (the public APK and web app links are paused)
 
