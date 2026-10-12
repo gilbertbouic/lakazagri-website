@@ -1030,3 +1030,11 @@ button, input, select, textarea { font: inherit; }
   margin-top: 0.35rem;
 }
 .mkweli-parent-logo { height: 22px; width: auto; opacity: 0.95; }
+
+/* Small visit counter in the footer */
+.footer-bottom .visit-counter {
+  font-size: 0.78rem;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+[hidden] { display: none !important; }
